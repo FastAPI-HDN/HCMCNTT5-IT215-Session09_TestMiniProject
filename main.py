@@ -90,7 +90,7 @@ def create_flight(request: Request, payload: FlightCreateRequest):
         status_code = 201,
         message ="Khởi tạo chuyến bay mới thành công!",
         data=new_flight,
-        path=str(requet.url.path)
+        path=str(request.url.path)
     )
     return JSONResponse(status_code=201, content = envelope_success)
 
